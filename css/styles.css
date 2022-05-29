@@ -287,11 +287,13 @@ img {
   background-color: var(--backdrop);
 
   transition: all 800ms ease 0ms;
+  z-index: 999;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+
 }
 
 .modal {
@@ -299,7 +301,8 @@ img {
   top: 50%;
   left: 50%;
   width: 528px;
-  height: 581px;
+  padding: 40px;
+
 
   background-color: var(--main-bg-cl);
 
@@ -319,6 +322,168 @@ img {
   background: var(--main-bg-cl);
   border: 1px solid var(--modal-btn-bg);
   border-radius: 50%;
+}
+
+.icon-close-btn {
+  fill: var(--header-border-cl-currenn);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-modal:hover .icon-close-btn,
+.btn-modal:focus .icon-close-btn {
+  fill: var(--accent-cl);
+}
+
+
+.modal-title {
+  display: block;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-txt-cl);
+}
+
+
+.form-modal-group {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.form-modal-label {
+  display: inline-block;
+  width: 100%;
+
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  text-align: start;
+  color: var(--main-txt-cl);
+}
+
+.form-modal-input {
+  width: 100%;
+  padding: 11px 12px 11px 43px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+}
+
+
+.form-modal-input:focus {
+  border-color: var(--accent-cl);
+}
+
+.form-modal-icon {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+
+  fill: var(--secondary-txt-cl);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-input:focus+.form-modal-icon {
+  fill: var(--accent-cl);
+}
+
+.modal-textarea {
+  resize: none;
+  padding: 12px 16px;
+}
+
+.form-policy-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.form-custom-checkbox {
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+  outline: 2px solid var(--secondary-txt-cl);
+  outline-offset: -2px;
+}
+
+.form-modal-checkbox:checked+.form-custom-checkbox {
+  background-color: var(--accent-cl);
+  outline: 2px solid var(--accent-cl);
+}
+
+.icon-check {
+  opacity: 0;
+  fill: var(--main-bg-cl);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-checkbox:checked+.form-custom-checkbox .icon-check {
+  opacity: 1;
+}
+
+.form-agreement-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: 0.03em;
+
+  color: var(--main-txt-cl);
+}
+
+.form-agreement-link {
+  text-decoration-line: underline;
+  color: var(--accent-cl);
+}
+
+.form-agreement-btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--main-bg-cl);
+
+  background: var(--accent-cl);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-agreement-btn:hover,
+.form-agreement-btn:focus {
+  color: var(--main-bg-cl);
+  background-color: var(--hero-btn);
 }
 
 /* Our Features section and What are we doing section*/
@@ -377,6 +542,7 @@ img {
 
 .services {
   padding-bottom: 94px;
+
 }
 
 .services-title {
@@ -386,6 +552,7 @@ img {
 .services-list {
   display: flex;
   align-items: center;
+
 }
 
 .services-item {
@@ -401,6 +568,7 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 1;
 
   display: block;
   width: 100%;
