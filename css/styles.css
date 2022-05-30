@@ -23,10 +23,10 @@
 }
 
 body {
-  font-family: var(--main-font), sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.03em;
   color: var(--main-txt-cl);
+  font-size: 16px;
+  font-family: var(--main-font), sans-serif;
+  letter-spacing: 0.03em;
 }
 
 h1,
@@ -41,8 +41,8 @@ p {
 
 ul,
 ol {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 img {
@@ -53,24 +53,29 @@ img {
 
 .visually-hidden {
   position: absolute;
-  white-space: nowrap;
+
   width: 1px;
   height: 1px;
-  overflow: hidden;
-  border: 0;
+  margin: -1px;
   padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  margin: -1px;
 }
 
 .link {
-  text-decoration: none;
   color: currentColor;
+  text-decoration: none;
+
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
@@ -85,19 +90,19 @@ img {
 .services-title,
 .team-title,
 .clients-title {
+  color: var(--secondary-txt-cl);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  color: var(--secondary-txt-cl);
 }
 
 .container {
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /* Page header */
@@ -113,12 +118,12 @@ img {
 
 /* Header main navigation */
 .logo {
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
 
   color: var(--accent-cl);
+  font-weight: 700;
+  font-size: 26px;
+  font-family: var(--secondary-font);
+  line-height: 1.2;
 }
 
 .logo-header {
@@ -169,13 +174,14 @@ img {
   bottom: 0;
   left: 0;
 
-  content: '';
   display: block;
   width: 100%;
   height: 4px;
 
   background: var(--accent-cl);
   border-radius: 2px;
+
+  content: '';
 }
 
 .сontacts-link {
@@ -211,6 +217,7 @@ img {
 .icon-envelope,
 .icon-smartphone {
   margin-right: 10px;
+
   fill: currentColor;
 }
 
@@ -218,8 +225,8 @@ img {
 .hero {
   max-width: 1600px;
   height: 600px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   padding-top: 200px;
   padding-bottom: 200px;
 
@@ -234,45 +241,48 @@ img {
 .hero-title {
   align-items: center;
   width: 696px;
-  margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+  margin-left: auto;
+
+  color: var(--third-txt-cl);
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
-
-  color: var(--third-txt-cl);
 }
 
 .hero-btn {
+  align-items: center;
   width: 200px;
   height: 50px;
 
-  font-family: inherit;
+  color: var(--third-txt-cl);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.9;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
 
-  color: var(--third-txt-cl);
+  font-family: inherit;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  text-align: center;
+
   background-color: var(--accent-cl);
   border: none;
   border-radius: 4px;
 
-  transition-property: color, background-color;
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  transition-property: color, background-color;
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
   color: var(--main-bg-cl);
+
   background-color: var(--hero-btn);
 }
 
@@ -280,6 +290,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
 
   width: 100%;
   height: 100%;
@@ -287,11 +298,11 @@ img {
   background-color: var(--backdrop);
 
   transition: all 800ms ease 0ms;
-  z-index: 999;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
+
   pointer-events: none;
 
 }
@@ -300,6 +311,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+
   width: 528px;
   padding: 40px;
 
@@ -325,10 +337,11 @@ img {
 }
 
 .icon-close-btn {
-  fill: var(--header-border-cl-currenn);
-  transition-property: fill;
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: fill;
+
+  fill: var(--header-border-cl-currenn);
 }
 
 .btn-modal:hover .icon-close-btn,
@@ -341,17 +354,19 @@ img {
   display: block;
   margin-bottom: 12px;
 
+  color: var(--secondary-txt-cl);
+
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
   letter-spacing: 0.03em;
-  color: var(--secondary-txt-cl);
+  text-align: center;
 }
 
 
 .form-modal-group {
   position: relative;
+
   display: block;
   margin-bottom: 12px;
 }
@@ -362,12 +377,13 @@ img {
 
   margin-bottom: 4px;
 
+  color: var(--main-txt-cl);
+
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   text-align: start;
-  color: var(--main-txt-cl);
 }
 
 .form-modal-input {
@@ -385,6 +401,7 @@ img {
 .form-modal-input:hover,
 .form-modal-input:hover+.form-modal-icon {
   border-color: var(--accent-cl);
+
   fill: var(--accent-cl);
 }
 
@@ -393,16 +410,18 @@ img {
   bottom: 12px;
   left: 10px;
 
-  fill: var(--secondary-txt-cl);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  fill: var(--secondary-txt-cl);
 }
 
 .modal-textarea {
-  resize: none;
   padding: 12px 16px;
+
+  resize: none;
 }
 
 .form-policy-group {
@@ -413,22 +432,23 @@ img {
 }
 
 .form-custom-checkbox {
-  width: 16px;
-  height: 15px;
-  margin-right: 9px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
 
   border-radius: 4px;
   outline: 2px solid var(--secondary-txt-cl);
   outline-offset: -2px;
   cursor: pointer;
 
-  transition-property: background-color, outline;
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  transition-property: background-color, outline;
 }
 
 .form-modal-checkbox:checked+.form-custom-checkbox {
@@ -443,11 +463,13 @@ img {
 
 .icon-check {
   opacity: 0;
-  fill: var(--main-bg-cl);
+
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  fill: var(--main-bg-cl);
 }
 
 .form-modal-checkbox:checked+.form-custom-checkbox .icon-check {
@@ -455,16 +477,17 @@ img {
 }
 
 .form-agreement-text {
+
+  color: var(--main-txt-cl);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71px;
   letter-spacing: 0.03em;
-
-  color: var(--main-txt-cl);
 }
 
 .form-agreement-link {
   text-decoration-line: underline;
+
   color: var(--accent-cl);
 }
 
@@ -474,25 +497,28 @@ img {
   height: 50px;
   margin: 0 auto;
 
+  color: var(--main-bg-cl);
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
-  color: var(--main-bg-cl);
 
   background: var(--accent-cl);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 
   transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-agreement-btn:hover,
 .form-agreement-btn:focus {
   color: var(--main-bg-cl);
+
   background-color: var(--hero-btn);
 }
 
@@ -505,8 +531,8 @@ img {
 }
 
 .features-item {
-  margin-right: 30px;
   width: 270px;
+  margin-right: 30px;
 }
 
 .features-item:last-child {
@@ -525,29 +551,31 @@ img {
 
 .features-item-title {
   margin-bottom: 10px;
+
+  color: var(--secondary-txt-cl);
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
-  color: var(--secondary-txt-cl);
 }
 
 .features-text {
+  color: var(--main-txt-cl);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  color: var(--main-txt-cl);
 }
 
 .features-box {
   display: flex;
-  width: 270px;
-  height: 120px;
-  background-color: var(--secondary-bg-cl);
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  width: 270px;
+  height: 120px;
   margin-bottom: 30px;
+
+  background-color: var(--secondary-bg-cl);
+  border-radius: 4px;
 }
 
 .services {
@@ -567,6 +595,7 @@ img {
 
 .services-item {
   position: relative;
+
   margin-right: 30px;
 }
 
@@ -585,13 +614,15 @@ img {
   padding-top: 27px;
   padding-bottom: 27px;
 
+  color: var(--third-txt-cl);
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
-  color: var(--third-txt-cl);
+
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8));
 }
 
@@ -599,6 +630,7 @@ img {
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
+
   background-color: var(--secondary-bg-cl);
 }
 
@@ -613,10 +645,11 @@ img {
 
 .team-item {
   margin-right: 30px;
+
   background-color: var(--main-bg-cl);
+  border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
 
 .team-item:last-child {
@@ -624,30 +657,32 @@ img {
 }
 
 .team-group {
-  padding-top: 30px;
-  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-  width: 270px;
   align-items: center;
+  width: 270px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-subtitle {
   margin-bottom: 10px;
+
+  color: var(--secondary-txt-cl);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  color: var(--secondary-txt-cl);
 }
 
 .team-text {
+  margin-bottom: 16px;
+
+  color: var(--main-txt-cl);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  color: var(--main-txt-cl);
-  margin-bottom: 16px;
 }
 
 .team-social-list {
@@ -670,17 +705,20 @@ img {
   width: 44px;
   height: 44px;
 
-  fill: var(--main-icon-cl);
   border-radius: 50%;
 
-  transition-property: background-color, fill;
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  transition-property: background-color, fill;
+
+  fill: var(--main-icon-cl);
 }
 
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: var(--accent-cl);
+
   fill: var(--main-bg-cl);
 }
 
@@ -715,38 +753,42 @@ img {
   height: 92px;
 
   border: solid 1px var(--main-icon-cl);
-  fill: var(--main-icon-cl);
   border-radius: 4px;
 
-  transition-property: border, fill;
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  transition-property: border, fill;
+
+  fill: var(--main-icon-cl);
 }
 
 .clients-link:hover,
 .clients-link:focus {
   border: solid 1px var(--accent-cl);
+
   fill: var(--accent-cl);
 }
 
 /* Page footer */
 .footer {
+  box-sizing: border-box;
   padding-top: 60px;
   padding-bottom: 60px;
+
   background-color: var(--dark-bg-cl);
-  box-sizing: border-box;
 }
 
 .footer-container {
   display: flex;
-  justify-content: flex-start;
   align-items: baseline;
+  justify-content: flex-start;
 }
 
 .logo-box {
-  margin-right: 70px;
   display: flex;
   flex-direction: column;
+  margin-right: 70px;
 }
 
 .logo-footer {
@@ -754,26 +796,29 @@ img {
 }
 
 .address {
-  font-style: normal;
   display: flex;
   flex-direction: column;
+
+  font-style: normal;
 }
 
 .address-text {
   margin-bottom: 9px;
+
+  color: var(--main-bg-cl);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  color: var(--main-bg-cl);
 }
 
 .address-link {
-  margin-bottom: 9px;
   flex-wrap: wrap;
+  margin-bottom: 9px;
+
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .address-link:last-child {
@@ -789,12 +834,13 @@ img {
 .join-title {
   display: flex;
   margin-bottom: 20px;
+
+  color: var(--third-txt-cl);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--third-txt-cl);
 }
 
 .join-list {
@@ -817,18 +863,21 @@ img {
   width: 44px;
   height: 44px;
 
-  fill: var(--main-bg-cl);
-  border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 
   transition-property: background-color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  fill: var(--main-bg-cl);
 }
 
 .join-link:hover,
 .join-link:focus {
   background-color: var(--accent-cl);
+
   fill: var(--main-bg-cl);
 }
 
@@ -840,12 +889,13 @@ img {
 .subscribe-title {
   display: flex;
   margin-bottom: 20px;
+
+  color: var(--third-txt-cl);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--third-txt-cl);
 }
 
 .subscribe-input-email {
@@ -854,6 +904,8 @@ img {
   margin-right: 12px;
   padding: 15px 16px;
 
+  color: rgba(255, 255, 255, 0.6);
+
 
 
 
@@ -861,17 +913,17 @@ img {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 
   ransition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ? НЕ зовсім розумію які зміни мають бути при фокусі та ховері на інпуті згідно макету */
@@ -892,26 +944,29 @@ img {
   height: 50px;
   padding: 10px 28px 10px 29px;
 
-  font-family: inherit;
+  color: var(--third-txt-cl);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.9;
-  text-align: center;
-  letter-spacing: 0.06em;
 
-  color: var(--third-txt-cl);
+  font-family: inherit;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  text-align: center;
+
   background-color: var(--accent-cl);
   border: none;
   border-radius: 4px;
 
-  transition-property: color, background-color;
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  transition-property: color, background-color;
 }
 
 .subscribe-btn:hover,
 .subscribe-btn:focus {
   color: var(--main-bg-cl);
+
   background-color: var(--hero-btn);
 }
 
@@ -949,27 +1004,30 @@ img {
 .btn-description {
   padding: 6px 22px;
 
-  font-family: inherit;
-  font-style: normal;
+  color: var(--secondary-txt-cl);
   font-weight: 500;
   font-size: 16px;
+
+  font-family: inherit;
+  font-style: normal;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0.03em;
-  color: var(--secondary-txt-cl);
+  text-align: center;
 
   background-color: var(--secondary-bg-cl);
   border: none;
   border-radius: 4px;
 
-  transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  transition-property: color, background-color, box-shadow;
 }
 
 .btn-description:hover,
 .btn-description:focus {
   color: var(--third-txt-cl);
+
   background-color: var(--accent-cl);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -998,9 +1056,10 @@ img {
 .gallery-link {
   width: 370px;
 
-  transition-property: box-shadow;
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  transition-property: box-shadow;
 }
 
 .gallery-link:hover,
@@ -1010,6 +1069,7 @@ img {
 
 .gallery-img-box {
   position: relative;
+
   overflow: hidden;
 }
 
@@ -1022,18 +1082,20 @@ img {
   width: 100%;
   padding: 63px 24px;
 
+  color: var(--third-txt-cl);
+
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
 
-  color: var(--third-txt-cl);
   background-image: linear-gradient(to right, rgba(33, 150, 243, 0.9), rgba(33, 150, 243, 0.9));
 
   transform: translateY(100%);
 
-  transition-property: transform;
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  transition-property: transform;
 }
 
 .gallery-link:hover .gallery-description,
@@ -1043,22 +1105,24 @@ img {
 
 .gallery-title {
   margin-bottom: 4px;
+
+  color: var(--secondary-txt-cl);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--secondary-txt-cl);
 }
 
 .gallery-text {
+  color: var(--main-txt-cl);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
-  color: var(--main-txt-cl);
 }
 
 .gallery-group {
   padding: 20px 24px;
+
   border-right: 1px solid var(--gallery-item-border-cl);
   border-bottom: 1px solid var(--gallery-item-border-cl);
   border-left: 1px solid var(--gallery-item-border-cl);
