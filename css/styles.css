@@ -380,8 +380,12 @@ img {
 }
 
 
-.form-modal-input:focus {
+.form-modal-input:focus,
+.form-modal-input:focus+.form-modal-icon,
+.form-modal-input:hover,
+.form-modal-input:hover+.form-modal-icon {
   border-color: var(--accent-cl);
+  fill: var(--accent-cl);
 }
 
 .form-modal-icon {
@@ -394,10 +398,6 @@ img {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-modal-input:focus+.form-modal-icon {
-  fill: var(--accent-cl);
 }
 
 .modal-textarea {
