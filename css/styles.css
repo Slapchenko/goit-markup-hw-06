@@ -424,10 +424,20 @@ img {
   border-radius: 4px;
   outline: 2px solid var(--secondary-txt-cl);
   outline-offset: -2px;
+  cursor: pointer;
+
+  transition-property: background-color, outline;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-modal-checkbox:checked+.form-custom-checkbox {
   background-color: var(--accent-cl);
+  outline: 2px solid var(--accent-cl);
+}
+
+.form-modal-checkbox:hover+.form-custom-checkbox,
+.form-modal-checkbox:focus+.form-custom-checkbox {
   outline: 2px solid var(--accent-cl);
 }
 
